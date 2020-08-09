@@ -5,9 +5,8 @@ var startGameBtn = document.querySelector("#start-game");
 var startPrompt = document.querySelector("#start-prompt")
 var startDirect = document.querySelector("#directions");
 var questionPrompt = document.querySelector("#question-prompt")
-var questionText = questions[questionIndex.text]
-var questionOptions = questions[questionIndex.options]
-
+var questionText = document.querySelector["#question-text"];
+var questionOptions = document.querySelector("#question-options")
 var questions = [
     { 
         text:"Commonly used data types do NOT include:",
@@ -66,19 +65,8 @@ function renderQuestion(){
 
 }
 
-var seconds=60;
-var timer;
-function Countdown() {
-  if(seconds < 75) {
-    document.getElementById("timer").innerHTML = seconds;
-  }
-     if (seconds >0 ) {
-         seconds--;
-     } else {
-         clearInterval(timer);
-        //kick it to the end screen;
-     }
-}
+
+
 
 document.body.addEventListener("click", function (e){
     if (!e.target.matches(".question-option")) return;
