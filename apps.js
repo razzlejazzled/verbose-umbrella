@@ -71,6 +71,7 @@ function renderQuestion(){
 
 
 document.body.addEventListener("click", function (e){
+    e.preventDefault;
     if (!e.target.matches(".question-option")) return;
 
     var value =e.target.value;
