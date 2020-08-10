@@ -2,11 +2,19 @@
     margin-top: 20px;
 }
 
+.btn-start {
+    background-color: purple;
+    color: gold;
+    text-align: center;
+    font-weight: bold;
+}
+
 .btn-primary {
     background-color: purple;
     color: gold;
     text-align: center;
     font-weight: bold;
+    display: none
 }
 
 #directions {
@@ -14,10 +22,4 @@
     margin-top: 10px;
 }
 
-#question-text {
-    display: none;
-}
 
-.question{
-    display: none;
-}

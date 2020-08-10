@@ -5,8 +5,8 @@ var startGameBtn = document.querySelector("#start-game");
 var startPrompt = document.querySelector("#start-prompt")
 var startDirect = document.querySelector("#directions");
 var questionPrompt = document.querySelector("#question-prompt")
-var questionText = document.querySelector["#question-text"];
-var questionOptions = document.querySelector("#question-options")
+var questionText = document.querySelector("#question-text");
+var questionOptions = document.querySelector(".question-options")
 var questions = [
     { 
         text:"Commonly used data types do NOT include:",
@@ -53,10 +53,12 @@ startGameBtn.addEventListener("click", function(e){
 
 function renderQuestion(){
     var question =questions[questionIndex];
-    questionText.textContent = question.text
+    questionText.textContent = questions[questionIndex].text;
+    console.log(questions[questionIndex].text)
     questionOptions.innerHTML = "";
     for (var i = 0; i < question.options; i++) {
         var btn = document.createElement("button");
+        btn.setAttribute("style", "display: initial")
         btn.setAttribute("class", "btn btn-primary");
         btn.setAttribute("Value", question.options[i]);
         btn.textContent = question.options[i];
@@ -81,4 +83,18 @@ document.body.addEventListener("click", function (e){
     }
     questionIndex++;
     renderQuestion()
-})
+});
+
+var seconds=75;
+var timer;
+function Countdown() {
+  if(seconds < 75) {
+    document.getElementById("timer").innerHTML = seconds;
+  }
+     if (seconds >0 ) {
+         seconds--;
+     } else {
+         clearInterval(timer);
+        //kick it to the ending screen;
+     }
+} 

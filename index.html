@@ -24,7 +24,7 @@
             </div>
             <div class="col-8 text-center" id="start-prompt">
                 <h1>Quiz Time!</h1>
-                <button id="start-game" class="btn btn-primary">Begin!</button>
+                <button id="start-game" class="btn btn-start">Begin!</button>
                 <p id="directions">Try to answer all questions correctly. This is a timed quiz. Each correct answer adds
                     to your time, while each wrong answer substracts from your time. At the end, the amount of time you
                     have left is your score.</p>
@@ -41,89 +41,21 @@
     <!--The Questions-->
     <div class="row">
         <div class="col text-center">
-            <div id="question-prompt d-none">
-                <h2 id="question question-text">Commonly used data types do NOT include:</h2>
-                <div class="question">
-                    <button class="btn btn-primary">Strings</button>
-
-                    <button class="btn btn-primary">Booleans</button>
-
-                    <button class="btn btn-primary">Alerts</button>
-
-                    <button class="btn btn-primary">Numbers</button>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col text-center">
             <div id="question-prompt">
-                <h2 id="question question-text">The condition in an if/else statement is enclosed within:</h2>
-                <div class="question">
-                    <button class="btn btn-primary">Quotes</button>
+                <h2 id="question-text"></h2>
+                <div class="question-options">
+                    <button class="btn btn-primary"></button>
 
-                    <button class="btn btn-primary">Curly Brackets</button>
+                    <button class="btn btn-primary"></button>
 
-                    <button class="btn btn-primary">Parenthesis</button>
+                    <button class="btn btn-primary"></button>
 
-                    <button class="btn btn-primary">Square Brackets</button>
+                    <button class="btn btn-primary"></button>
                 </div>
             </div>
         </div>
     </div>
-    <div class="row">
-        <div class="col text-center">
-            <div id="question-prompt">
-                <h2 id="question question-text">Arrays in Javascript can be used to store:</h2>
-                <div class="question">
-                    <button class="btn btn-primary">Numbers and Strings</button>
-
-                    <button class="btn btn-primary">Other Arrays</button>
-
-                    <button class="btn btn-primary">Booleans</button>
-
-                    <button class="btn btn-primary">All of the above</button>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col text-center">
-            <div id="question-prompt">
-                <h2 id=" question question-text">String valuse must be enclosed in ____ when being assigned to variables:</h2>
-                <div class="question">
-                    <button class="btn btn-primary">Commas</button>
-
-                    <button class="btn btn-primary">Curly Brackets</button>
-
-                    <button class="btn btn-primary">Quotation Marks</button>
-
-                    <button class="btn btn-primary">Parenthesis</button>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col text-center">
-            <div id="question question-prompt">
-                <h2 id="question-text">A very useful tool during devlopment and debugging for printing content to the
-                    debugger is:</h2>
-                <div class="question">
-                    <button class="btn btn-primary">Javascript</button>
-
-                    <button class="btn btn-primary">Terminal/Bash</button>
-
-                    <button class="btn btn-primary">For Loops</button>
-
-                    <button class="btn btn-primary">console.log</button>
-                </div>
-            </div>
-        </div>
-    </div>
-
-
-
-
+  
     <!--adding in bootstrap javascript in case it is necessary for some of the bootstrap functions I use (as of right now, that's just the grid). I intend to run the quiz through my own javascript.-->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
