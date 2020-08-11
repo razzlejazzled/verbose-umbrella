@@ -9,6 +9,9 @@ var questionText = document.querySelector("#question-text");
 var questionOptions = document.querySelector(".question-options")
 var timerContainer = document.querySelector(".timer-container");
 var timeSpan = document.querySelector("#time");
+var response = document.querySelector("#response")
+var end = document.querySelector(".Game-Over")
+var subBox = document.querySelector(".submission-box")
 var questionIndex = 0;
 var time = 75;
 var timer;
@@ -64,7 +67,8 @@ function renderQuestion() {
 
     for (var i = 0; i < question.options.length; i++) {
         var btn = document.createElement("button");
-        btn.setAttribute("class", "btn-primary");
+        btn.setAttribute("class", "btn-primary question-options");
+     
         btn.setAttribute("Value", question.options[i]);
         btn.textContent = question.options[i];
         questionOptions.append(btn);
@@ -88,14 +92,12 @@ function startTimer() {
 
 document.body.addEventListener("click", function (e) {
     e.preventDefault;
-    if (!e.target.matches(".question-option")) return;
-
     var value = e.target.value;
-    if (questions[questionIndex.answer] === value) {
-        console.log("Correct!");
+    if (questions[questionIndex].answer === value) {
+        response.textContent = "You are correct!"
 
     } else {
-        console.log("You were wrong!");
+        response.textContent = "You are wrong!"
         time -= 10;
         timeSpan.textContent = time;
     }
@@ -112,20 +114,49 @@ endGame()
 
 function endGame() {
     if (questionIndex > 3 || time === 0) {
+        //clear out screen
         clearInterval(timer);
         questionPrompt.style.display = "none";
         questionOptions.style.display = "none";
-       var p = document.createElement("p")
-       p.setAttribute("Style", "text-align: center");
-       p.textContent = ("Please Submit Your Score. Try to get a higher score each time. Thanks for playing!")        
-        textContent.append(p)
+        response.textContent = "";
+
+        //create Game Over Messarge Header
         var h1 = document.createElement("h1")
         h1.setAttribute("Style", "font-weight: bold, text-align: center");
         h1.textContent = ("Game Over!")
-        textContent.append(h1)
+        end.append(h1)
+        end.textContent.append(h1)
         
+        //Create Game Over Message
+       var p = document.createElement("p")
+       p.setAttribute("Style", "text-align: center");
+       p.textContent = ("Please Submit Your Score. Try to get a higher score each time. Thanks for playing!")   
+       end.append(p)     
+        p.textContent.append(end)
+       
+        //Create Submission Box
+        var box = document.createElement("input")
+        box.textContent = ("Your Initials")
+        box.append(subBox)
 
+
+
+        //And Submission button
+        var subBtn = document.createElement("button")
+        subBtn.textcontent = "Submit"
+        subBtn.append(subBox)
 
 
     }
 }
+
+//save submission in local file
+document.body.addEventListener("click", function(e){
+    var score = (subBtn.userInput +) //figure out a way to make the remaining time populate here
+    
+    JSON.stringify(score)
+    localStorage.setItem("score", JSON.stringify(score))
+
+    ///make it so that the high score is empty until this functino is run, then append it with the new data. 
+})
+
