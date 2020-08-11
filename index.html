@@ -16,46 +16,53 @@
     <div class="container text-center">
         <!--The initial start prompt and button Move this down into its own row and adjust the other columns. Becky says it will prevent that timer from floating over. -->
         <div class="row">
-            <div class="col-2">
+            <div class="col">
                 <div class="container" id="High-Scores">
                     <!--put the high scores here?-->
                     <p>High Score Placeholder</p>
                 </div>
             </div>
-            <div class="col-8 text-center" id="start-prompt">
-                <h1>Quiz Time!</h1>
-                <button id="start-game" class="btn btn-start">Begin!</button>
-                <p id="directions">Try to answer all questions correctly. This is a timed quiz. Each correct answer adds
-                    to your time, while each wrong answer substracts from your time. At the end, the amount of time you
-                    have left is your score.</p>
-            </div>
-            <div class="col-2 text-right">
-                <div class="container" id="timer">
+            <div class="col text-right">
+                <div class="timer-container" style="display: none;">
                     <!--put timer Here?-->
-                    <p>Timer placeholder</p>
+                    <h4>Time Left:<span id="time"></span></h4>
                 </div>
+
             </div>
         </div>
 
     </div>
     <!--The Questions-->
+    <div class="row text-center" id="start-prompt">
+        <div class="col">
+            <h1>Quiz Time!</h1>
+            <button id="start-game" class="btn btn-start">Begin!</button>
+            <p id="directions">Try to answer all questions correctly. This is a timed quiz. Each correct answer adds
+                to your time, while each wrong answer substracts from your time. At the end, the amount of time you
+                have left is your score.</p>
+        </div>
+    </div>
     <div class="row">
         <div class="col text-center">
             <div id="question-prompt">
                 <h2 id="question-text"></h2>
-                <div class="question-options">
-                    <button class="btn btn-primary"></button>
-
-                    <button class="btn btn-primary"></button>
-
-                    <button class="btn btn-primary"></button>
-
-                    <button class="btn btn-primary"></button>
-                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class ="col text-center">
+            <div class="question-options">
+            </div>
             </div>
         </div>
     </div>
-  
+
+
+    <div class="row" id="Game-Over">
+        
+
+    </div>
+   
+
     <!--adding in bootstrap javascript in case it is necessary for some of the bootstrap functions I use (as of right now, that's just the grid). I intend to run the quiz through my own javascript.-->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"

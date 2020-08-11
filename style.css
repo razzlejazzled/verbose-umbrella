@@ -1,5 +1,6 @@
 #start-prompt{
     margin-top: 20px;
+    text-align: center;
 }
 
 .btn-start {
@@ -14,7 +15,7 @@
     color: gold;
     text-align: center;
     font-weight: bold;
-    display: none
+ 
 }
 
 #directions {
@@ -22,4 +23,16 @@
     margin-top: 10px;
 }
 
+.timer-container{
+    position: fixed;
+    top: 10px;
+    right: 40px;
+   
+}
+
+#high-scores {
+    position: fixed;
+    top: 10px;
+    left: 40px;
+}
 
