@@ -122,14 +122,19 @@ function endGame() {
 
         //create Game Over Messarge Header
         var h1 = document.createElement("h1")
-        h1.setAttribute("Style", "font-weight: bold, text-align: center");
         h1.textContent = "Game Over!";
+        h1.setAttribute("Style", "font-weight: bold");
+        h1.setAttribute("Style", "text-align: center")
+        h1.setAttribute("Style", "margin-top: 100px" )
+        h1.setAttribute("Style", "margin-bottom: 100px")
+         
         end.append(h1)
        
 
         //Create Game Over Message
         var p = document.createElement("p")
         p.setAttribute("Style", "text-align: center");
+        p.setAttribute("Style", "margin-top: 100px")
         p.textContent = "Please Submit Your Score. Try to get a higher score each time. Thanks for playing!"
         end.append(p)
         
