@@ -135,7 +135,7 @@ function endGame() {
         p.textContent.append(end)
        
         //Create Submission Box
-        var box = document.createElement("input")
+        var box = document.body.createElement("input")
         box.textContent = ("Your Initials")
         box.append(subBox)
 
